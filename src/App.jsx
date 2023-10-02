@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
+import { useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <div className="bg-gray-100">
         <Navbar />
-        <div className="container mx-auto shadow-pages rounded-t-pages p-5 bg-white min-h-screen">
-          <Outlet />
-        </div>
+        <AnimatePresence mode="wait">
+          <Outlet location={location} key={location.pathname} />
+        </AnimatePresence>
       </div>
     </>
   );

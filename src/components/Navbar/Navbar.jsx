@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { ActivateLink } from "./ActivateLink";
 
 export const Navbar = () => {
@@ -22,7 +21,7 @@ export const Navbar = () => {
             >
               Main
             </ActivateLink>
-            <ActivateLink to="/">About me</ActivateLink>
+            <ActivateLink to="/"></ActivateLink>
             <ActivateLink to="/projects">Projects</ActivateLink>
           </div>
         </div>

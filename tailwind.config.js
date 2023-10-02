@@ -27,6 +27,7 @@ export default {
       fontFamily: {
         'Hahmlet': ['Hahmlet', 'cursive'],
         'titles': ['Inconsolata', 'cursive'],
+        'Main': ['Teko', 'cursive'],
       },
     },
   },

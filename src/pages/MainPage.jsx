@@ -1,9 +1,23 @@
+import { AboutMeCard } from "../components/MainPage/AboutMeCard";
+import { ContactMe } from "../components/MainPage/ContactMe";
+import { motion } from "framer-motion";
+
 export const MainPage = () => {
   return (
-    <div className="container mx-auto h-5/6">
-      <div className="flex justify-center ">
-        <h1 className="text-6xl p-6 col-span-full font-titles">Developer</h1>
+    <motion.div
+      className="container mx-auto shadow-pages rounded-t-pages p-5 bg-white min-h-screen"
+      initial={{ y: 200 }}
+      animate={{ y: 0 }}
+      exit={{ y: 200 }}
+    >
+      <div className="container mx-auto h-5/6">
+        <section>
+          <AboutMeCard />
+        </section>
+        <section className="flex justify-center">
+          <ContactMe />
+        </section>
       </div>
-    </div>
+    </motion.div>
   );
 };
